@@ -12,9 +12,17 @@ use App\Traits\ConsumesExternalService;
          */
         public $baseUri;
 
+        /**
+        * The secret to consume the User2 Service
+        * @var string
+        */
+        public $secret;
+
         public function __construct()
         {
-        $this->baseUri = config('services.users2.base_uri');
+            $this->baseUri = config('services.users2.base_uri');
+            $this->secret = config('services.users2.secret');
+
         }
 
         public function obtainUsers2 ()
@@ -24,7 +32,7 @@ use App\Traits\ConsumesExternalService;
 
         public function createUser2($data)
         {
-        return $this->performRequest('POST', '/users', $data);
+            return $this->performRequest('POST', '/users', $data);
         }
 
         public function obtainUser2($id)

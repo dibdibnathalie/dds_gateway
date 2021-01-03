@@ -36,11 +36,7 @@
             return $this->successResponse($this->user1Service->obtainUsers1());
             
         }
-        
-        public function result()
-        {        
-            
-        }
+    
 
         //add user function
         public function add(Request $request)

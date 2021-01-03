@@ -40,7 +40,7 @@
         //add user function
         public function add(Request $request)
         {
-            return $this->successResponse($this->user2Service->create2User($request->all(), Response::HTTP_CREATED));
+            return $this->successResponse($this->user2Service->createUser2($request->all(), Response::HTTP_CREATED));
         }
 
         //specific user search function
